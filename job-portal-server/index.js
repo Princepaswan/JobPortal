@@ -15,7 +15,9 @@ app.use(cors({
 
 
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@job-portal-demo.krv6aeo.mongodb.net`;
+// const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@job-portal-demo.krv6aeo.mongodb.net`;
+
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.5sr15.mongodb.net/`;
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -116,8 +118,9 @@ process.on('SIGINT', async () => {
 app.use(express.static(path.join(__dirname, "../../job-portal-server/dist")));
 
 app.get('/', (req, res) => {
-  res.send('Hello developer!');
+  res.send('Hello Prince!');
 });
+
 
 app.listen(port, () => {
   console.log(`app is listening on port ${port}`);

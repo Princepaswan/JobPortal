@@ -42,8 +42,8 @@ const Newsletter = () => {
         </p>
         <div className="w-full space-y-4">
           <input
-            type="submit"
-            value="Upload your resume"
+            type="file"
+            // value="Upload your resume"
             className="w-full block py-2 bg-blue rounded-sm text-white cursor-pointer font-semibold"
           />
         </div>

@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://mern-jobportal-ckfs.onrender.com/all-jobs`)
+    fetch(`https://jobportal-s3py.onrender.com/all-jobs`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
